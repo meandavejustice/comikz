@@ -24,3 +24,8 @@ h1 {
     font-family: ComicSerif;
     font-weight: lighter;
 }
+
+#file {
+    position: absolute;
+    left: -1500px;
+}
