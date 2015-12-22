@@ -15,12 +15,14 @@
   ],
   "license": "BSD",
   "dependencies": {
-    "electron-debug": "^0.5.1",
-    "electron-prebuilt": "^0.36.0",
     "node-unrar": "^0.1.1",
     "shell-escape": "^0.2.0",
     "tachyons": "^4.0.0",
     "tmp": "0.0.28",
     "vkey": "^1.0.0"
+  },
+  "devDependencies": {
+    "electron-debug": "^0.5.1",
+    "electron-prebuilt": "^0.36.0"
   }
 }

@@ -7,6 +7,7 @@ var escape = require('shell-escape');
 var activeIndex = 0;
 var tmpPath = '';
 var globFiles = [];
+var ctrlPressed = false;
 var cleanup = function(){};
 
 tmp.setGracefulCleanup();
@@ -56,12 +57,18 @@ document.getElementById('file').addEventListener('change', function(ev) {
 });
 
 function next() {
-  if (activeIndex > globFiles.length -1) setPage(activeIndex = 0);
+  if (activeIndex > globFiles.length -1) {
+    setPage(activeIndex = 0);
+    window.scrollTo(0,0);
+  }
   else setPage(++activeIndex)
 }
 
 function prev() {
-  if (activeIndex < 0) setPage(activeIndex = globFiles.length -1);
+  if (activeIndex < 0) {
+    setPage(activeIndex = globFiles.length -1);
+    window.scrollTo(0,0);
+  }
   else setPage(--activeIndex)
 }
 
